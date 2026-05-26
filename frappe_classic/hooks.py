@@ -26,7 +26,10 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/frappe_classic/css/frappe_classic.css"
-app_include_js = "/assets/frappe_classic/js/page_override.js"
+app_include_js = [
+    "/assets/frappe_classic/js/page_override.js",
+    "/assets/frappe_classic/js/remove_sidebar_search.js",
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/frappe_classic/css/frappe_classic.css"

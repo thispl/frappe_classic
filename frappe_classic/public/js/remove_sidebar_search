@@ -1,0 +1,22 @@
+frappe.after_ajax(() => {
+	const removeSearch = () => {
+		const el = document.querySelector("#navbar-modal-search");
+
+		if (el) {
+			el.style.setProperty("display", "none", "important");
+			el.remove();
+		}
+	};
+
+	removeSearch();
+
+	// observe route/ui changes
+	const observer = new MutationObserver(() => {
+		removeSearch();
+	});
+
+	observer.observe(document.body, {
+		childList: true,
+		subtree: true
+	});
+});
